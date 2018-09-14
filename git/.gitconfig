@@ -1,0 +1,34 @@
+[user]
+	name = Luis Miguel Fresneda
+	email = email@email.com
+[credential]
+	helper = manager
+[merge]
+  tool = meld
+[mergetool "meld"]
+  cmd = \"C:\\Program Files (x86)\\Meld\\Meld.exe\" "$LOCAL" "$BASE" "$REMOTE" "--output=$MERGED"  
+  path = C:/Program Files (x86)/Meld/Meld.exe
+  trustExitCode = false  
+  keepBackup = false
+
+[diff]
+  tool = meld
+[difftool "meld"]
+  cmd = \"C:\\Program Files (x86)\\Meld\\Meld.exe\" "$LOCAL" "$REMOTE"
+  path = C:/Program Files (x86)/Meld/Meld.exe
+  
+[mergetool]
+  keepBackup = false
+[commit]
+	template = C:/Users/<user>/.gitmessage.txt
+
+[core]
+	editor = nano
+	safecrlf = false
+[alias]
+	co = commit
+	br = branch
+	ci = commit
+	st = status
+	last = log -1 HEAD
+	ch = checkout
